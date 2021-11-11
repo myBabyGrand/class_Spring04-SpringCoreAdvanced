@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class OrderController_V0 {
 
-    private final OrderService_V0 orderService_v0;
+    private final OrderService_V0 orderService;
 
     @GetMapping("/v0/request")
     public String request(String itemId){
-        orderService_v0.orderItem(itemId);
+        orderService.orderItem(itemId);
         return "ok";
     }
 }

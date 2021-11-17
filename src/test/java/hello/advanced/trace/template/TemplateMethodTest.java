@@ -1,6 +1,6 @@
 package hello.advanced.trace.template;
 
-import hello.advanced.trace.template.code.AbstratTemplate;
+import hello.advanced.trace.template.code.AbstractTemplate;
 import hello.advanced.trace.template.code.SubClassLogic1;
 import hello.advanced.trace.template.code.SubClassLogic2;
 import lombok.extern.slf4j.Slf4j;
@@ -38,16 +38,16 @@ public class TemplateMethodTest {
     @Test
     @DisplayName("템플릿 패턴 적용")
     void tempateMethod_V1(){
-        AbstratTemplate template1 = new SubClassLogic1();
+        AbstractTemplate template1 = new SubClassLogic1();
         template1.execute();
-        AbstratTemplate template2 = new SubClassLogic2();
+        AbstractTemplate template2 = new SubClassLogic2();
         template2.execute();
     }
 
     @Test
     @DisplayName("익명 내부클래스를 이용하여 템플릿 패턴 적용")
     void tempateMethod_V2(){
-        AbstratTemplate template1 = new AbstratTemplate(){
+        AbstractTemplate template1 = new AbstractTemplate(){
             @Override
             protected void call() {
                 log.info("business Logic : {} ","template1" );
@@ -56,7 +56,7 @@ public class TemplateMethodTest {
         log.info(template1.getClass().toString());
         template1.execute();
 
-        AbstratTemplate template2 = new AbstratTemplate(){
+        AbstractTemplate template2 = new AbstractTemplate(){
             @Override
             protected void call() {
                 log.info("business Logic : {} ","template2" );

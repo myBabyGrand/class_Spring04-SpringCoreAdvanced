@@ -1,7 +1,6 @@
 package hello.advanced.app.v2;
 
 import hello.advanced.trace.TraceStatus;
-import hello.advanced.trace.hellotrace.HelloTrace_V1;
 import hello.advanced.trace.hellotrace.HelloTrace_V2;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +12,7 @@ public class OrderController_V2 {
 
     private final OrderService_V2 orderService;
     private final HelloTrace_V2 trace;
+
 
     @GetMapping("/v2/request")
     public String request(String itemId){

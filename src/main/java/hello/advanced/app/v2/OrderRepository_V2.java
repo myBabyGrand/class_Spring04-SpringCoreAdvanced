@@ -2,7 +2,6 @@ package hello.advanced.app.v2;
 
 import hello.advanced.trace.TraceId;
 import hello.advanced.trace.TraceStatus;
-import hello.advanced.trace.hellotrace.HelloTrace_V1;
 import hello.advanced.trace.hellotrace.HelloTrace_V2;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -37,4 +36,5 @@ public class OrderRepository_V2 {
             e.printStackTrace();
         }
     }
+
 }
